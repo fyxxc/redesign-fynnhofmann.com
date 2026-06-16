@@ -11,57 +11,51 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { margin: 0; background: #111014; }
-  ::selection { background: #FFD400; color: #111014; }
-  .fh-nav-link:hover { color: #fff !important; }
-  .fh-pill { transition: transform .18s, filter .18s; }
-  .fh-pill:hover { transform: translateY(-2px); filter: brightness(1.05); }
   .fh-slidebtn { transition: background .18s, transform .18s; }
-  .fh-slidebtn:hover { background: #FFD400 !important; color: #111014 !important; transform: scale(1.05); }
+  .fh-slidebtn:hover { background: var(--yellow) !important; color: var(--bg) !important; transform: scale(1.05); }
 </style>
 </helmet>
 
-<div style="background: #111014; color: #F5F3EF; font-family: 'Space Grotesk', sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;">
+<div class="fh-page">
 
   <!-- NAV -->
-  <div style="position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); background: rgba(17,16,20,0.72); border-bottom: 1px solid rgba(255,255,255,0.06);">
-    <div style="max-width: 980px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 16px 28px;">
-      <a href="fynnhofmann.com.dc.html" style="display: flex; align-items: center; gap: 11px; text-decoration: none; color: inherit;">
-        <div style="position: relative; width: 34px; height: 34px; border-radius: 10px; background: #2563EB; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 21px; font-weight: 700; font-family: 'Helvetica Neue', Arial; line-height: 1; padding-bottom: 2px; overflow: hidden;">f<span style="position: absolute; bottom: 0; right: 0; width: 13px; height: 13px; background: #FFD400; border-top-left-radius: 7px;"></span></div>
-        <span style="font-size: 16px; font-weight: 600; letter-spacing: -0.01em;">Fynn</span>
+  <div class="fh-nav">
+    <div class="fh-nav-row fh-nav-row--narrow">
+      <a href="fynnhofmann.com.dc.html" class="fh-brand">
+        <div class="fh-mark">f<span class="fh-mark-dot"></span></div>
+        <span class="fh-brand-name">Fynn</span>
       </a>
-      <div style="display: flex; gap: 6px; font-size: 13px; font-weight: 600;">
-        <a href="projekte.dc.html" class="fh-nav-link" style="text-decoration: none; color: #fff; padding: 9px 16px; border-radius: 100px; background: rgba(255,255,255,0.08);">Projekte</a>
-        <a href="erfahrung.dc.html" class="fh-nav-link" style="text-decoration: none; color: #c5c2bb; padding: 9px 16px; border-radius: 100px;">Erfahrung</a>
-        <a href="kontakt.dc.html" style="text-decoration: none; color: #111014; background: #FFD400; padding: 9px 18px; border-radius: 100px;">Kontakt</a>
+      <div class="fh-nav-links">
+        <a href="projekte.dc.html" class="fh-nav-link is-active">Projekte</a>
+        <a href="erfahrung.dc.html" class="fh-nav-link">Erfahrung</a>
+        <a href="kontakt.dc.html" class="fh-nav-cta">Kontakt</a>
       </div>
     </div>
   </div>
 
   <!-- PAGE HERO -->
-  <div style="max-width: 980px; margin: 0 auto; padding: 64px 28px 40px;">
-    <a href="projekte.dc.html" class="fh-nav-link" style="font-size: 14px; color: #6f6c66; text-decoration: none;">← Zurück zu den Projekten</a>
-    <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #FFD400; margin: 28px 0 16px;">Deep Dive · BLS AG</div>
-    <h1 style="font-size: clamp(48px, 9vw, 120px); line-height: 0.88; font-weight: 700; letter-spacing: -0.04em; margin: 0;">ServiceNow.</h1>
-    <p style="font-size: clamp(17px, 2.2vw, 22px); line-height: 1.5; color: #c5c2bb; max-width: 54ch; margin: 28px 0 0;">Mehr Einblicke in meine ServiceNow-Projekte — von Catalog Items bis zu komplexen Genehmigungs-Workflows.</p>
+  <div class="fh-hero fh-hero--narrow" style="padding-bottom: 40px;">
+    <a href="projekte.dc.html" class="fh-back">← Zurück zu den Projekten</a>
+    <div class="fh-eyebrow">Deep Dive · BLS AG</div>
+    <h1 class="fh-h1" style="font-size: clamp(48px, 9vw, 120px); line-height: 0.88;">ServiceNow.</h1>
+    <p class="fh-lead" style="max-width: 54ch;">Mehr Einblicke in meine ServiceNow-Projekte — von Catalog Items bis zu komplexen Genehmigungs-Workflows.</p>
   </div>
 
   <!-- HIGHLIGHTS -->
-  <div style="max-width: 980px; margin: 0 auto; padding: 16px 28px 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px;">
-    <div style="background: #16151a; border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 28px;"><div style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.03em; color: #FFD400;">∞</div><p style="font-size: 15px; color: #c5c2bb; margin: 8px 0 0; line-height: 1.5;">Catalog Items von Grund auf gebaut</p></div>
-    <div style="background: #16151a; border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 28px;"><div style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.03em; color: #2563EB;">Flow</div><p style="font-size: 15px; color: #c5c2bb; margin: 8px 0 0; line-height: 1.5;">Workflows & Genehmigungen im Flow Designer</p></div>
-    <div style="background: #16151a; border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 28px;"><div style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.03em; color: #22C55E;">KB</div><p style="font-size: 15px; color: #c5c2bb; margin: 8px 0 0; line-height: 1.5;">Knowledge Base & TopDesk-Migration</p></div>
+  <div class="fh-wrap fh-wrap--narrow" style="padding-top: 16px; padding-bottom: 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px;">
+    <div class="fh-card fh-card--sm"><div style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.03em; color: var(--yellow);">∞</div><p style="font-size: 15px; color: var(--text-soft); margin: 8px 0 0; line-height: 1.5;">Catalog Items von Grund auf gebaut</p></div>
+    <div class="fh-card fh-card--sm"><div style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.03em; color: var(--blue);">Flow</div><p style="font-size: 15px; color: var(--text-soft); margin: 8px 0 0; line-height: 1.5;">Workflows & Genehmigungen im Flow Designer</p></div>
+    <div class="fh-card fh-card--sm"><div style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.03em; color: var(--green);">KB</div><p style="font-size: 15px; color: var(--text-soft); margin: 8px 0 0; line-height: 1.5;">Knowledge Base & TopDesk-Migration</p></div>
   </div>
 
   <!-- SLIDESHOW -->
-  <div style="max-width: 980px; margin: 0 auto; padding: 40px 28px 8px;">
+  <div class="fh-wrap fh-wrap--narrow" style="padding-top: 40px; padding-bottom: 8px;">
     <h2 style="font-size: clamp(24px, 3.4vw, 34px); font-weight: 700; letter-spacing: -0.02em; margin: 0;">Spannende Einblicke</h2>
-    <p style="font-size: 16px; color: #9a9892; margin: 10px 0 24px;">Ein paar Eindrücke von meinem Arbeitsplatz und meinen Projekten bei der BLS.</p>
+    <p style="font-size: 16px; color: var(--text-faint); margin: 10px 0 24px;">Ein paar Eindrücke von meinem Arbeitsplatz und meinen Projekten bei der BLS.</p>
 
-    <div style="position: relative; border-radius: 24px; overflow: hidden; background: #16151a; border: 1px solid rgba(255,255,255,0.1); aspect-ratio: 16/10;">
+    <div style="position: relative; border-radius: 24px; overflow: hidden; background: var(--surface); border: 1px solid var(--border); aspect-ratio: 16/10;">
       <img src="{{ currentImage }}" alt="ServiceNow Einblick" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .3s;" onError="{{ onImgError }}">
       <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; pointer-events: none; color: #4a4953; font-family: monospace; font-size: 13px;" id="sn-fallback">
         <span style="font-size: 32px;">⛏</span><span>Screenshot lädt … (extern gehostet)</span>
@@ -70,34 +64,34 @@
       <button onClick="{{ next }}" class="fh-slidebtn" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; border-radius: 50%; border: none; background: rgba(17,16,20,0.7); color: #fff; font-size: 22px; cursor: pointer; backdrop-filter: blur(6px);">→</button>
       <div style="position: absolute; top: 16px; right: 16px; background: rgba(17,16,20,0.7); color: #fff; padding: 6px 14px; border-radius: 100px; font-size: 13px; font-weight: 600; backdrop-filter: blur(6px);">{{ counter }}</div>
     </div>
-    <p style="font-size: 15px; line-height: 1.6; color: #c5c2bb; margin: 18px 4px 0; min-height: 3em;">{{ currentCaption }}</p>
+    <p style="font-size: 15px; line-height: 1.6; color: var(--text-soft); margin: 18px 4px 0; min-height: 3em;">{{ currentCaption }}</p>
   </div>
 
   <!-- LEARNINGS -->
-  <div style="max-width: 980px; margin: 0 auto; padding: 56px 28px;">
-    <div style="background: #16151a; border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: clamp(32px, 5vw, 56px);">
-      <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #FFD400; margin-bottom: 16px;">Meine Learnings</div>
+  <div class="fh-wrap fh-wrap--narrow" style="padding-top: 56px; padding-bottom: 56px;">
+    <div class="fh-card" style="padding: clamp(32px, 5vw, 56px);">
+      <div class="fh-eyebrow" style="margin: 0 0 16px;">Meine Learnings</div>
       <p style="font-size: clamp(17px, 2.2vw, 21px); line-height: 1.6; color: #e8e6e1; margin: 0;">Die BLS AG ist mein Lehrbetrieb, bei dem ich meine Ausbildung zum ICT-Fachmann EFZ absolviere. Anfangs war unser Team noch in Köniz stationiert, wo wir ausschliesslich unter IT-Kollegen arbeiteten — mittlerweile sind wir an den Europaplatz an der Freiburgstrasse 130 umgezogen.</p>
-      <p style="font-size: clamp(17px, 2.2vw, 21px); line-height: 1.6; color: #c5c2bb; margin: 20px 0 0;">Während meiner Zeit bei der BLS habe ich zahlreiche Telefone entgegengenommen und eine Vielzahl an Tickets bearbeitet. Besonders viel Spass hat mir das Erstellen von „Catalog Items" in ServiceNow gemacht — diese konnte ich gezielt an die Bedürfnisse unserer IT anpassen.</p>
+      <p style="font-size: clamp(17px, 2.2vw, 21px); line-height: 1.6; color: var(--text-soft); margin: 20px 0 0;">Während meiner Zeit bei der BLS habe ich zahlreiche Telefone entgegengenommen und eine Vielzahl an Tickets bearbeitet. Besonders viel Spass hat mir das Erstellen von „Catalog Items" in ServiceNow gemacht — diese konnte ich gezielt an die Bedürfnisse unserer IT anpassen.</p>
     </div>
   </div>
 
   <!-- CTA -->
-  <div style="max-width: 980px; margin: 0 auto; padding: 0 28px 80px; text-align: center;">
+  <div class="fh-wrap fh-wrap--narrow" style="padding-bottom: 80px; text-align: center;">
     <p style="font-size: clamp(22px, 3.4vw, 36px); font-weight: 600; letter-spacing: -0.02em; margin: 0 0 28px;">Fragen zu ServiceNow?</p>
-    <a href="kontakt.dc.html" class="fh-pill" style="text-decoration: none; background: #FFD400; color: #111014; padding: 14px 28px; border-radius: 100px; font-size: 15px; font-weight: 600;">Schreib mir →</a>
+    <a href="kontakt.dc.html" class="fh-pill fh-pill--yellow">Schreib mir →</a>
   </div>
 
   <!-- FOOTER -->
-  <div style="border-top: 1px solid rgba(255,255,255,0.06); max-width: 980px; margin: 0 auto; padding: 36px 28px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <div style="position: relative; width: 26px; height: 26px; border-radius: 8px; background: #2563EB; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; font-family: 'Helvetica Neue', Arial; line-height: 1; padding-bottom: 2px; overflow: hidden;">f<span style="position: absolute; bottom: 0; right: 0; width: 10px; height: 10px; background: #FFD400; border-top-left-radius: 5px;"></span></div>
-      <span style="font-size: 14px; color: #c5c2bb;">© 2026 Fynn Hofmann · Bern</span>
+  <div class="fh-footer fh-footer--narrow">
+    <div class="fh-footer-brand">
+      <div class="fh-mark fh-mark--sm">f<span class="fh-mark-dot"></span></div>
+      <span class="fh-footer-copy">© 2026 Fynn Hofmann · Bern</span>
     </div>
-    <div style="display: flex; gap: 22px; font-size: 14px;">
-      <a href="projekte.dc.html" class="fh-nav-link" style="color: #6f6c66; text-decoration: none;">Projekte</a>
-      <a href="erfahrung.dc.html" class="fh-nav-link" style="color: #6f6c66; text-decoration: none;">Erfahrung</a>
-      <a href="kontakt.dc.html" class="fh-nav-link" style="color: #6f6c66; text-decoration: none;">Kontakt</a>
+    <div class="fh-footer-links">
+      <a href="projekte.dc.html">Projekte</a>
+      <a href="erfahrung.dc.html">Erfahrung</a>
+      <a href="kontakt.dc.html">Kontakt</a>
     </div>
   </div>
 

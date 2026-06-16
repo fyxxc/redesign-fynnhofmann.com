@@ -11,60 +11,53 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { margin: 0; background: #111014; }
-  ::selection { background: #FFD400; color: #111014; }
-  .fh-nav-link:hover { color: #fff !important; }
-  .fh-pill { transition: transform .18s, filter .18s; }
-  .fh-pill:hover { transform: translateY(-2px); filter: brightness(1.05); }
-</style>
+<link rel="stylesheet" href="style.css">
 </helmet>
 
-<div style="background: #111014; color: #F5F3EF; font-family: 'Space Grotesk', sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;">
+<div class="fh-page">
 
   <!-- NAV -->
-  <div style="position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); background: rgba(17,16,20,0.72); border-bottom: 1px solid rgba(255,255,255,0.06);">
-    <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 16px 28px;">
-      <a href="fynnhofmann.com.dc.html" style="display: flex; align-items: center; gap: 11px; text-decoration: none; color: inherit;">
-        <div style="position: relative; width: 34px; height: 34px; border-radius: 10px; background: #2563EB; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 21px; font-weight: 700; font-family: 'Helvetica Neue', Arial; line-height: 1; padding-bottom: 2px; overflow: hidden;">f<span style="position: absolute; bottom: 0; right: 0; width: 13px; height: 13px; background: #FFD400; border-top-left-radius: 7px;"></span></div>
-        <span style="font-size: 16px; font-weight: 600; letter-spacing: -0.01em;">Fynn</span>
+  <div class="fh-nav">
+    <div class="fh-nav-row fh-nav-row--tight">
+      <a href="fynnhofmann.com.dc.html" class="fh-brand">
+        <div class="fh-mark">f<span class="fh-mark-dot"></span></div>
+        <span class="fh-brand-name">Fynn</span>
       </a>
-      <div style="display: flex; gap: 6px; font-size: 13px; font-weight: 600;">
-        <a href="projekte.dc.html" class="fh-nav-link" style="text-decoration: none; color: #c5c2bb; padding: 9px 16px; border-radius: 100px;">Projekte</a>
-        <a href="erfahrung.dc.html" class="fh-nav-link" style="text-decoration: none; color: #c5c2bb; padding: 9px 16px; border-radius: 100px;">Erfahrung</a>
-        <a href="kontakt.dc.html" style="text-decoration: none; color: #111014; background: #FFD400; padding: 9px 18px; border-radius: 100px;">Kontakt</a>
+      <div class="fh-nav-links">
+        <a href="projekte.dc.html" class="fh-nav-link">Projekte</a>
+        <a href="erfahrung.dc.html" class="fh-nav-link">Erfahrung</a>
+        <a href="kontakt.dc.html" class="fh-nav-cta">Kontakt</a>
       </div>
     </div>
   </div>
 
   <!-- PAGE HERO -->
-  <div style="max-width: 900px; margin: 0 auto; padding: 64px 28px 48px;">
-    <a href="fynnhofmann.com.dc.html" class="fh-nav-link" style="font-size: 14px; color: #6f6c66; text-decoration: none;">← Zurück</a>
-    <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #FFD400; margin: 28px 0 16px;">Rechtliches</div>
-    <h1 style="font-size: clamp(48px, 9vw, 116px); line-height: 0.9; font-weight: 700; letter-spacing: -0.04em; margin: 0;">Impressum.</h1>
-    <p style="font-size: clamp(17px, 2.2vw, 22px); line-height: 1.5; color: #c5c2bb; max-width: 50ch; margin: 28px 0 0;">Transparenz über Technik und Verantwortlichkeiten.</p>
+  <div class="fh-hero fh-hero--tight">
+    <a href="fynnhofmann.com.dc.html" class="fh-back">← Zurück</a>
+    <div class="fh-eyebrow">Rechtliches</div>
+    <h1 class="fh-h1">Impressum.</h1>
+    <p class="fh-lead">Transparenz über Technik und Verantwortlichkeiten.</p>
   </div>
 
   <!-- CONTENT -->
-  <div style="max-width: 900px; margin: 0 auto; padding: 16px 28px 40px; display: flex; flex-direction: column; gap: 18px;">
+  <div class="fh-wrap fh-wrap--tight" style="padding-top: 16px; padding-bottom: 56px;">
 
-    <div style="background: #16151a; border: 1px solid rgba(255,255,255,0.1); border-radius: 22px; padding: 32px;">
-      <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8a8780;">Angaben</div>
-      <h3 style="font-size: 24px; font-weight: 700; letter-spacing: -0.02em; margin: 14px 0 0;">Betreiber der Website</h3>
-      <p style="font-size: 17px; line-height: 1.6; color: #c5c2bb; margin: 14px 0 0;"><strong style="color: #fff;">Fynn Hofmann</strong><br>Bern, Schweiz</p>
-      <a href="/cdn-cgi/l/email-protection#dbb6bab2b79bbda2b5b5b3b4bdb6bab5b5f5b8b4b6" class="fh-pill" style="display: inline-block; margin-top: 18px; text-decoration: none; background: #1f1e24; color: #fff; padding: 10px 18px; border-radius: 100px; font-size: 14px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1);"><span class="__cf_email__" data-cfemail="6e030f07022e08170000060108030f0000400d0103">[email&#160;protected]</span> →</a>
+    <!-- Betreiber — single bold block, matches homepage colour language -->
+    <div class="fh-imp-block fh-bg-yellow">
+      <div class="fh-imp-kicker">Angaben</div>
+      <div class="fh-imp-title">Fynn Hofmann</div>
+      <p class="fh-imp-text" style="opacity: 0.75;">Bern, Schweiz</p>
+      <a href="/cdn-cgi/l/email-protection#dbb6bab2b79bbda2b5b5b3b4bdb6bab5b5f5b8b4b6" class="fh-pill fh-pill--black fh-pill--sm" style="margin-top: 18px;"><span class="__cf_email__" data-cfemail="6e030f07022e08170000060108030f0000400d0103">[email&#160;protected]</span> →</a>
     </div>
 
-    <div style="background: #16151a; border: 1px solid rgba(255,255,255,0.1); border-radius: 22px; padding: 32px;">
-      <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8a8780;">Technik</div>
-      <h3 style="font-size: 24px; font-weight: 700; letter-spacing: -0.02em; margin: 14px 0 0;">Technischer Aufbau</h3>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; margin-top: 22px;">
-        <div><div style="font-size: 13px; color: #6f6c66;">Hosting</div><div style="font-size: 16px; color: #e8e6e1; margin-top: 4px;">Cloudflare Pages</div></div>
-        <div><div style="font-size: 13px; color: #6f6c66;">DNS &amp; CDN</div><div style="font-size: 16px; color: #e8e6e1; margin-top: 4px;">Cloudflare</div></div>
-        <div><div style="font-size: 13px; color: #6f6c66;">Technologie</div><div style="font-size: 16px; color: #e8e6e1; margin-top: 4px;">HTML, CSS &amp; JS</div></div>
-        <div><div style="font-size: 13px; color: #6f6c66;">Schrift</div><div style="font-size: 16px; color: #e8e6e1; margin-top: 4px;">Space Grotesk</div></div>
+    <!-- Technik — plain stat strip, no card -->
+    <div style="margin-top: 56px;">
+      <div class="fh-eyebrow" style="margin: 0 0 6px;">Technischer Aufbau</div>
+      <div class="fh-imp-stats">
+        <div><div class="fh-imp-stat-label">Hosting</div><div class="fh-imp-stat-value">Cloudflare Pages</div></div>
+        <div><div class="fh-imp-stat-label">DNS &amp; CDN</div><div class="fh-imp-stat-value">Cloudflare</div></div>
+        <div><div class="fh-imp-stat-label">Technologie</div><div class="fh-imp-stat-value">HTML, CSS &amp; JS</div></div>
+        <div><div class="fh-imp-stat-label">Schrift</div><div class="fh-imp-stat-value">Space Grotesk</div></div>
       </div>
     </div>
 
@@ -83,10 +76,10 @@
       <div style="position: relative; width: 26px; height: 26px; border-radius: 8px; background: #2563EB; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; font-family: 'Helvetica Neue', Arial; line-height: 1; padding-bottom: 2px; overflow: hidden;">f<span style="position: absolute; bottom: 0; right: 0; width: 10px; height: 10px; background: #FFD400; border-top-left-radius: 5px;"></span></div>
       <span style="font-size: 14px; color: #c5c2bb;">2026 Fynn Hofmann · Bern</span>
     </div>
-    <div style="display: flex; gap: 22px; font-size: 14px;">
-      <a href="projekte.dc.html" class="fh-nav-link" style="color: #6f6c66; text-decoration: none;">Projekte</a>
-      <a href="erfahrung.dc.html" class="fh-nav-link" style="color: #6f6c66; text-decoration: none;">Erfahrung</a>
-      <a href="kontakt.dc.html" class="fh-nav-link" style="color: #6f6c66; text-decoration: none;">Kontakt</a>
+    <div class="fh-footer-links">
+      <a href="projekte.dc.html">Projekte</a>
+      <a href="erfahrung.dc.html">Erfahrung</a>
+      <a href="kontakt.dc.html">Kontakt</a>
     </div>
   </div>
 
@@ -95,10 +88,9 @@
 <template id="__bundler_thumbnail" data-bg-color="#111014">
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
     <rect width="1200" height="800" fill="#111014"/>
-    <rect x="400" y="260" width="400" height="60" rx="14" fill="#16151a" stroke="#3a3942" stroke-width="3"/>
-    <rect x="400" y="360" width="400" height="60" rx="14" fill="#16151a" stroke="#3a3942" stroke-width="3"/>
-    <rect x="400" y="460" width="400" height="60" rx="14" fill="#16151a" stroke="#3a3942" stroke-width="3"/>
-    <rect x="400" y="260" width="8" height="260" fill="#FFD400"/>
+    <rect x="380" y="260" width="440" height="180" rx="24" fill="#FFD400"/>
+    <rect x="380" y="470" width="440" height="20" rx="10" fill="#3a3942"/>
+    <rect x="380" y="510" width="300" height="20" rx="10" fill="#3a3942"/>
   </svg>
 </template>
 </x-dc>
