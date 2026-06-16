@@ -27,10 +27,18 @@ var FH_FOOTER_HTML = `
   </div>
 `;
 
+var FH_FOOTER_STYLE = "max-width: 1200px; margin: 0 auto; padding: 40px 28px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;";
+
 document.addEventListener("DOMContentLoaded", function () {
   var nav = document.getElementById("site-nav");
-  if (nav) nav.innerHTML = FH_NAV_HTML;
+  if (nav) {
+    nav.className = "fh-nav";
+    nav.innerHTML = FH_NAV_HTML;
+  }
 
   var footer = document.getElementById("site-footer");
-  if (footer) footer.innerHTML = FH_FOOTER_HTML;
+  if (footer) {
+    footer.style.cssText = FH_FOOTER_STYLE;
+    footer.innerHTML = FH_FOOTER_HTML;
+  }
 });
